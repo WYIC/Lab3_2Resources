@@ -1,0 +1,28 @@
+package my.edu.tarc.lab3_2resources;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.ViewAnimator;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView textViewMessage;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textViewMessage = (TextView) findViewById(R.id.textViewMessage);
+
+    }
+
+    public void showMessage (View view)
+    {
+        textViewMessage.setText(getString(R.string.message));
+    }
+}
